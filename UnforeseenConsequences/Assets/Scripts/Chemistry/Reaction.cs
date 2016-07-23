@@ -11,16 +11,21 @@ namespace UnforeseenConsequences.Chemistry
 	[CreateAssetMenu]
 	public class Reaction : ScriptableObject
 	{
-		[SerializeField] private Substance[] requiredSubstances;
-		[SerializeField] private Effect effect;
+		[SerializeField] private Substance[] requiredSubstances = new Substance[2];
+		[SerializeField] private Effect effectWhenMixed;
+		[SerializeField] private Substance createdSubstance;
 
 		public IEnumerable<Substance> RequiredSubstances
 		{
 			get { return this.requiredSubstances; }
 		}
-		public Effect Effect
+		public Substance CreatedSubstance
 		{
-			get { return this.effect; }
+			get { return this.createdSubstance; }
+		}
+		public Effect EffectWhenMixed
+		{
+			get { return this.effectWhenMixed; }
 		}
 	}
 }

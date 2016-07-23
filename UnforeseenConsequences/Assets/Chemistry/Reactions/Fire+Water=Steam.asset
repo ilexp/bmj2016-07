@@ -14,4 +14,5 @@ MonoBehaviour:
   requiredSubstances:
   - {fileID: 11400000, guid: b0906b33a887e1c4cad355e5b6b6e146, type: 2}
   - {fileID: 11400000, guid: 59545527588128340a6b043d2f6998ef, type: 2}
-  effect: {fileID: 11400000, guid: d91ee2c2cf69f5f4fb3a34a427a731bb, type: 2}
+  effectWhenMixed: {fileID: 11400000, guid: 9e2927e1589765f4daf3a8444b8e84df, type: 2}
+  createdSubstance: {fileID: 11400000, guid: a278953a47b5f0c4ba0bd742501038dd, type: 2}

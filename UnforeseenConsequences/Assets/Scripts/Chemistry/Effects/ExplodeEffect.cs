@@ -8,8 +8,12 @@ using UnityEngine;
 namespace UnforeseenConsequences.Chemistry
 {
 	[Serializable]
-	public abstract class Effect : ScriptableObject
+	[CreateAssetMenu]
+	public class ExplodeEffect : Effect
 	{
-		public abstract void Trigger();
+		public override void Trigger()
+		{
+			Debug.Log("EXPLODE");
+		}
 	}
 }

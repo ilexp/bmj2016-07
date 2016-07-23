@@ -13,6 +13,7 @@ namespace UnforeseenConsequences.Chemistry
 	{
 		[SerializeField] private string displayedName;
 		[SerializeField] private Color32 color;
+		[SerializeField] private Effect effectWhenApplied;
 
 		public string DisplayedName
 		{
@@ -21,6 +22,10 @@ namespace UnforeseenConsequences.Chemistry
 		public Color32 Color
 		{
 			get { return this.color; }
+		}
+		public Effect EffectWhenApplied
+		{
+			get { return this.effectWhenApplied; }
 		}
 	}
 }

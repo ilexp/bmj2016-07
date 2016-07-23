@@ -37,7 +37,9 @@ namespace UnforeseenConsequences.Chemistry
 				}
 
 				// Trigger the reaction's effect and add any created substances into the mix
-				substances.AddRange(reaction.Effect.Trigger());
+				if (reaction.EffectWhenMixed != null)
+					reaction.EffectWhenMixed.Trigger();
+				substances.Add(reaction.CreatedSubstance);
 
 				// Stop after one invoked reaction
 				return true;

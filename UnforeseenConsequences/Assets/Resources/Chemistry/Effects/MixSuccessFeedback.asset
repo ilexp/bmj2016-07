@@ -11,3 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ca5e9860ac78747bac1b51819907de, type: 3}
   m_Name: MixSuccessFeedback
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 51a6f59ab59395243a0f476ca272e26e, type: 3}

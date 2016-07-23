@@ -13,6 +13,7 @@ namespace UnforeseenConsequences.Chemistry
 	{
 		public override void Trigger()
 		{
+			base.Trigger();
 			Debug.Log("EXPLODE");
 		}
 	}

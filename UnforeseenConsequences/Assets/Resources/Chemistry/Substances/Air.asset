@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Air
   color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4294959060
   effectWhenApplied: {fileID: 0}

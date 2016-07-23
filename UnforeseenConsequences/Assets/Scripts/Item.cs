@@ -14,13 +14,13 @@ public class Item : InteractiveObject
 	// Update is called once per frame
 	void Update ()
 	{
-		checkForMouseClick();
+		//checkForMouseClick();
         if (m_isBeingDragged)
 		{
 			Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (transform.position != worldMousePos)
 			{
-				//Debug.Log("local pos = " + transform.position + ", mouse position = " + Input.mousePosition + ", world mouse pos = " + worldMousePos);
+				Debug.Log("local pos = " + transform.position + ", mouse position = " + Input.mousePosition + ", world mouse pos = " + worldMousePos);
 				transform.position = new Vector3(worldMousePos.x, worldMousePos.y, -1);
 			}
 		}
@@ -43,7 +43,7 @@ public class Item : InteractiveObject
 		}
 	}
 
-	void startDraggingItem()
+	public void startDraggingItem()
 	{
 		//if (m_playerInventory)
 		//{

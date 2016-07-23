@@ -14,4 +14,5 @@ MonoBehaviour:
   displayedName: Steam
   color:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
+  effectWhenApplied: {fileID: 0}

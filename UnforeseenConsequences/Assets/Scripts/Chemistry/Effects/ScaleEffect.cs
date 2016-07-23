@@ -9,12 +9,17 @@ namespace UnforeseenConsequences.Chemistry
 {
 	[Serializable]
 	[CreateAssetMenu]
-	public class ExplodeEffect : Effect
+	public class ScaleEffect : Effect
 	{
+		[SerializeField] private float scaleBy;
+
 		public override void Trigger(Character applyTo)
 		{
 			base.Trigger(applyTo);
-			Debug.Log("EXPLODE");
+			if (applyTo != null)
+			{
+				applyTo.transform.localScale *= this.scaleBy;
+			}
 		}
 	}
 }

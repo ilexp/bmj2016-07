@@ -13,7 +13,7 @@ namespace UnforeseenConsequences.Chemistry
 	{
 		public override void Trigger()
 		{
-			Debug.Log("Mixing Feedback");
+			base.Trigger();
 		}
 	}
 }

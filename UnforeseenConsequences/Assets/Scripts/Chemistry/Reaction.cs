@@ -28,7 +28,6 @@ namespace UnforeseenConsequences.Chemistry
 
 		public Reaction(Substance first, Substance second, Substance result, Effect mixEffect)
 		{
-			Debug.LogFormat("Created Reaction {0}, {1}, {2}, {3}", first, second, result, mixEffect);
 			this.ingredients = new Substance[2];
 			this.ingredients[0] = first;
 			this.ingredients[1] = second;

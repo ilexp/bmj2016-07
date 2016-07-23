@@ -11,15 +11,4 @@ namespace UnforeseenConsequences.Chemistry
 	public abstract class Effect : ScriptableObject
 	{
 	}
-	[Serializable]
-	[CreateAssetMenu]
-	public class CreateSubstanceEffect : Effect
-	{
-		[SerializeField] private Substance createdSubstance;
-
-		public Substance CreatedSubstance
-		{
-			get { return this.createdSubstance; }
-		}
-	}
 }

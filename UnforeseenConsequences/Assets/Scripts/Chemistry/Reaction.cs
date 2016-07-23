@@ -12,7 +12,7 @@ namespace UnforeseenConsequences.Chemistry
 	public class Reaction : ScriptableObject
 	{
 		[SerializeField] private Substance[] requiredSubstances;
-		[SerializeField] private Effect effect = new CreateSubstanceEffect();
+		[SerializeField] private Effect effect;
 
 		public IEnumerable<Substance> RequiredSubstances
 		{

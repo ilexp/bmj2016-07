@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BottlePotionOnClick.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Effect.cs" />
-    <Compile Include="Assets\Scripts\Chemistry\Effects\CreateSubstanceEffect.cs" />
+    <Compile Include="Assets\Scripts\Chemistry\Effects\ExplodeEffect.cs" />
+    <Compile Include="Assets\Scripts\Chemistry\Effects\MixFeedbackEffect.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Reaction.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Solver.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Substance.cs" />

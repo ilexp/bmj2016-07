@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+
+using UnforeseenConsequences.Chemistry;
 
 public class DraggableItem : InteractiveObject
 {
+	public List<Substance> m_potionSubstance;
+
 	Vector3 m_initialPosition;
 	void Start()
 	{
@@ -13,7 +18,6 @@ public class DraggableItem : InteractiveObject
 	// Update is called once per frame
 	void Update ()
 	{
-		//checkForMouseClick();
         if (this == m_draggedItem)
 		{
 			Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

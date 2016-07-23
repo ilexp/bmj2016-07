@@ -13,9 +13,17 @@ namespace UnforeseenConsequences.Chemistry
 		{
 			EnsureReactions();
 			List<Substance> pool = new List<Substance>(substances);
+			bool multiple = pool.Count > 1;
 
 			// Invoke reactions until nothing reacts anymore
 			while (InvokeReaction(pool));
+
+			// Are there substances left with no reaction performed? Explode!
+			if (multiple && pool.Count > 0)
+			{
+				Reactions.ExplodeEffect.Trigger();
+				pool.Clear();
+			}
 
 			// Return the remaining (or created) substances
 			return pool;

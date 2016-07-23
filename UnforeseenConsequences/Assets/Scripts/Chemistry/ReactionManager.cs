@@ -65,7 +65,7 @@ namespace UnforeseenConsequences.Chemistry
 				Create("Plant", "Dust", "Earth", "MixSuccessFeedback"),
 				Create("Metal", "Healing", "Monster", "MixSuccessFeedback"),
 				Create("Metal", "Pest", "Gold", "MixSuccessFeedback"),
-				Create("Healing", "Pest", "Cure", "MixSuccessFeedback"),
+				Create("Healing", "Pest", "Cure", "MixSuccessFeedback")
 			};
 		}
 		private Reaction Create(string first, string second, string result, string mixEffect)

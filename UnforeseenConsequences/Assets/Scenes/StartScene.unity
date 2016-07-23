@@ -181,6 +181,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 473020766}
     m_Modifications:
+    - target: {fileID: 11414894, guid: c16186333082db848b3c7d7a2b5a649f, type: 2}
+      propertyPath: m_potionSubstance.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22434700, guid: c16186333082db848b3c7d7a2b5a649f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -253,6 +257,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11414894, guid: c16186333082db848b3c7d7a2b5a649f, type: 2}
+      propertyPath: m_potionSubstance.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b0906b33a887e1c4cad355e5b6b6e146,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c16186333082db848b3c7d7a2b5a649f, type: 2}
   m_IsPrefabParent: 0
@@ -388,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -718,6 +727,7 @@ GameObject:
   - 114: {fileID: 1391126642}
   - 114: {fileID: 1391126639}
   - 114: {fileID: 1391126640}
+  - 114: {fileID: 1391126643}
   m_Layer: 5
   m_Name: Pot
   m_TagString: Untagged
@@ -839,6 +849,19 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &1391126643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1391126637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5525c10b6f3d0f47a07d94275770db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  middleImage: {fileID: 866232854}
+  content: {fileID: 0}
 --- !u!1 &1533663710
 GameObject:
   m_ObjectHideFlags: 0

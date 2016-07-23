@@ -9,8 +9,6 @@ namespace UnforeseenConsequences.Chemistry
 {
 	public static class Solver
 	{
-		private static Reaction[] allReactions;
-
 		public static List<Substance> Solve(IEnumerable<Substance> substances)
 		{
 			EnsureReactions();
@@ -24,14 +22,14 @@ namespace UnforeseenConsequences.Chemistry
 		}
 		private static bool InvokeReaction(List<Substance> substances)
 		{
-			foreach (Reaction reaction in allReactions)
+			foreach (Reaction reaction in Reactions.All)
 			{
 				// Skip if not all required substances are there
-				if (!reaction.RequiredSubstances.All(required => substances.Contains(required)))
+				if (!reaction.Ingredients.All(required => substances.Contains(required)))
 					continue;
 
 				// Remove the required substances
-				foreach (Substance required in reaction.RequiredSubstances)
+				foreach (Substance required in reaction.Ingredients)
 				{
 					substances.Remove(required);
 				}
@@ -39,7 +37,7 @@ namespace UnforeseenConsequences.Chemistry
 				// Trigger the reaction's effect and add any created substances into the mix
 				if (reaction.EffectWhenMixed != null)
 					reaction.EffectWhenMixed.Trigger();
-				substances.Add(reaction.CreatedSubstance);
+				substances.Add(reaction.Result);
 
 				// Stop after one invoked reaction
 				return true;
@@ -49,8 +47,8 @@ namespace UnforeseenConsequences.Chemistry
 		}
 		private static void EnsureReactions()
 		{
-			if (allReactions != null) return;
-			allReactions = UnityEngine.Object.FindObjectsOfType<Reaction>();
+			if (Reactions.Initialized) return;
+			Reactions.Init();
 		}
 	}
 }

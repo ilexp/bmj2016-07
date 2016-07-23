@@ -22,22 +22,17 @@ public class DragTarget : InteractiveObject
 		Debug.Log("OnMouseExit event on " + this.gameObject.name);
 	}
 
-	//void Update()
-	//{
-	//	checkForMouseClick();
-	//}
+	void Update()
+	{
+		checkForMouseover();
+	}
 
-	//protected void checkForMouseClick()
-	//{
-	//	if (m_isHovered && !EventSystem.current.IsPointerOverGameObject())
-	//	{
-	//		if (Input.GetKeyDown(KeyCode.Mouse0))
-	//		{
-	//			Debug.Log("Left Mouse click event on " + this.gameObject.name);
-	//			handleLeftMouseClick(Input.mousePosition);
-	//		}
-	//	}
-	//}
+	protected void checkForMouseover()
+	{
+		if (m_isHovered && !EventSystem.current.IsPointerOverGameObject())
+		{
+		}
+	}
 
 	//public override void handleMouseDown()
 	//{

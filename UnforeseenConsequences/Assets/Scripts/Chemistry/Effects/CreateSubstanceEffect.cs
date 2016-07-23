@@ -17,5 +17,11 @@ namespace UnforeseenConsequences.Chemistry
 		{
 			get { return this.createdSubstance; }
 		}
+
+		public override IEnumerable<Substance> Trigger()
+		{
+			Debug.LogFormat("Create substance IN ALL CAPS {0}", this.createdSubstance.DisplayedName);
+			return new Substance[] { this.createdSubstance };
+		}
 	}
 }

@@ -10,5 +10,6 @@ namespace UnforeseenConsequences.Chemistry
 	[Serializable]
 	public abstract class Effect : ScriptableObject
 	{
+		public abstract IEnumerable<Substance> Trigger();
 	}
 }

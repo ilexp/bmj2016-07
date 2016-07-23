@@ -8,7 +8,7 @@ using UnforeseenConsequences.Chemistry;
 
 namespace UnforeseenConsequences
 {
-	public class MixingPot : MonoBehaviour
+	public class MixingPot : MonoBehaviour, IDragTargetListener
 	{
 		[SerializeField] private Image middleImage;
 		[SerializeField] private Substance content;
@@ -52,6 +52,10 @@ namespace UnforeseenConsequences
 				substances.Add(potionScript.Content);
 				Content = Solver.Solve(substances).FirstOrDefault<Substance>();
 			}
+		}
+		public void OnItemDragged(DraggableItem in_item)
+		{
+			this.addPotion(in_item);
 		}
 	}
 }

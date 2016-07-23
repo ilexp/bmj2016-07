@@ -63,9 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BottlePotionOnClick.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Effect.cs" />
+    <Compile Include="Assets\Scripts\Chemistry\Effects\ChangeColorEffect.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Effects\ExplodeEffect.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Effects\MixFeedbackEffect.cs" />
+    <Compile Include="Assets\Scripts\Chemistry\Effects\ScaleEffect.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Reaction.cs" />
     <Compile Include="Assets\Scripts\Chemistry\ReactionManager.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Solver.cs" />

@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Crystal
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4292861919
   effectWhenApplied: {fileID: 0}

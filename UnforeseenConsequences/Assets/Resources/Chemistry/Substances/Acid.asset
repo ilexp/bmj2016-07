@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Acid
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4286643968
   effectWhenApplied: {fileID: 0}

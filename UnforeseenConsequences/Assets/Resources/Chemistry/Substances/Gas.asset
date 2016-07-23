@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Gas
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 2873973598
   effectWhenApplied: {fileID: 0}

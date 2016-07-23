@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Cure
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4278190335
   effectWhenApplied: {fileID: 0}

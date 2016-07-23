@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Healing
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4285543869
   effectWhenApplied: {fileID: 0}

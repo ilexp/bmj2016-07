@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Mud
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4279647838
   effectWhenApplied: {fileID: 0}

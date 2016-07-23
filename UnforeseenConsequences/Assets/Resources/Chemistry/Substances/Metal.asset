@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Metal
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4287664272
   effectWhenApplied: {fileID: 0}

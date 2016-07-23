@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Lightning
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4291034623
   effectWhenApplied: {fileID: 0}

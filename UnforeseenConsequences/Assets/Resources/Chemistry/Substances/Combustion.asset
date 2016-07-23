@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Combustion
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4285001471
   effectWhenApplied: {fileID: 0}

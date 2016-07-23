@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Plant
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4282157356
   effectWhenApplied: {fileID: 0}

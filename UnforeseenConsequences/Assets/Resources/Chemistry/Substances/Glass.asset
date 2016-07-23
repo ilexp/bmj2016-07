@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Glass
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 2298478591
   effectWhenApplied: {fileID: 0}

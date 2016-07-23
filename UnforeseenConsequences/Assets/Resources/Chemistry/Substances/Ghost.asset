@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Ghost
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4292139198
   effectWhenApplied: {fileID: 0}

@@ -14,5 +14,5 @@ MonoBehaviour:
   displayedName: Stone
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4284111450
   effectWhenApplied: {fileID: 0}

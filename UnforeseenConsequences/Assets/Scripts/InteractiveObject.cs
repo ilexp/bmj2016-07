@@ -10,7 +10,7 @@ namespace UnforeseenConsequences
 		public virtual void destroyObject()
 		{
 			this.gameObject.SetActive(false);
-			Destroy(this);
+			Destroy(this.gameObject);
 		}
 
 		public virtual void handleMouseDown()

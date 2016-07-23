@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Fire+Water=Steam
+  m_EditorClassIdentifier: Assembly-CSharp:UnforeseenConsequences.Chemistry:Reaction
+  requiredSubstances:
+  - {fileID: 11400000, guid: b0906b33a887e1c4cad355e5b6b6e146, type: 2}
+  - {fileID: 11400000, guid: 59545527588128340a6b043d2f6998ef, type: 2}
+  effect: {fileID: 11400000, guid: d91ee2c2cf69f5f4fb3a34a427a731bb, type: 2}

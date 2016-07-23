@@ -12,7 +12,7 @@ namespace UnforeseenConsequences.Chemistry
 	{
 		[SerializeField] private AudioClip audioClip;
 
-		public virtual void Trigger()
+		public virtual void Trigger(Character applyTo)
 		{
 			if (audioClip != null)
 				AudioSource.PlayClipAtPoint(audioClip, Vector3.zero);

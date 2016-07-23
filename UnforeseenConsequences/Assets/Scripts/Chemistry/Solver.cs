@@ -27,7 +27,7 @@ namespace UnforeseenConsequences.Chemistry
 			// Are there substances left with no reaction performed? Explode!
 			if (multiple && !anyReactionDone && pool.Count > 0)
 			{
-				reactionManager.ExplodeEffect.Trigger();
+				reactionManager.ExplodeEffect.Trigger(null);
 				pool.Clear();
 			}
 
@@ -63,7 +63,7 @@ namespace UnforeseenConsequences.Chemistry
 				// Trigger the reaction's effect and add any created substances into the mix
 				Debug.LogFormat("Mixed {0} and {1}, got {2}", reaction.Ingredients.ElementAt(0).name, reaction.Ingredients.ElementAt(1).name, reaction.Result.name);
 				if (reaction.EffectWhenMixed != null)
-					reaction.EffectWhenMixed.Trigger();
+					reaction.EffectWhenMixed.Trigger(null);
 				substances.Add(reaction.Result);
 
 				// Stop after one invoked reaction

@@ -11,9 +11,9 @@ namespace UnforeseenConsequences.Chemistry
 	[CreateAssetMenu]
 	public class MixFeedbackEffect : Effect
 	{
-		public override void Trigger()
+		public override void Trigger(Character applyTo)
 		{
-			base.Trigger();
+			base.Trigger(applyTo);
 		}
 	}
 }

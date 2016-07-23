@@ -52,6 +52,7 @@ namespace UnforeseenConsequences.Chemistry
 				Create("Steam", "Magma", "Fire", "MixSuccessFeedback"),
 				Create("Steam", "Lightning", "Fire", "MixSuccessFeedback"),
 				Create("Steam", "Plant", "Water", "MixSuccessFeedback"),
+				Create("Steam", "Dust", "Pest", "MixSuccessFeedback"),
 				Create("Ghost", "Magma", "Metal", "MixSuccessFeedback"),
 				Create("Ghost", "Lightning", "Air", "MixSuccessFeedback"),
 				Create("Ghost", "Plant", "Water", "MixSuccessFeedback"),

@@ -25,7 +25,7 @@ namespace UnforeseenConsequences
 			{
 				// create new potion
 				GameObject newPotion = Instantiate(m_potionPrefab);
-				newPotion.transform.position = m_potionsBar.transform.position;
+				newPotion.transform.position = m_potionsBar.transform.position + new Vector3(Random.Range(-5.0f, 5.0f), Random.Range(-1.0f, 1.0f), 0);
 				newPotion.transform.parent = m_potionsBar;
 				DraggableItem item = newPotion.GetComponent<DraggableItem>();
 				if (item)
@@ -33,7 +33,7 @@ namespace UnforeseenConsequences
 					// pour pot content into potion
 					Potion potionScript = item.GetComponent<Potion>();
 					potionScript.Content = potScript.Content;
-					potScript.Content = null;
+					//potScript.Content = null;
 				}
 			}
 			else

@@ -15,4 +15,4 @@ MonoBehaviour:
   color:
     serializedVersion: 2
     rgba: 4292861919
-  effectWhenApplied: {fileID: 0}
+  effectWhenApplied: {fileID: 11400000, guid: d96fddfb6613e0649ad58a079b045052, type: 2}

@@ -46,7 +46,7 @@ namespace UnforeseenConsequences
 			else
 			{
 				// snap back to initial position
-				transform.position = m_initialPosition;
+				//transform.position = m_initialPosition;
 				setImageRaycastTarget(true);
 			}
 		}

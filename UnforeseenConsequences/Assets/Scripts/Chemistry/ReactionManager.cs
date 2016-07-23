@@ -7,29 +7,28 @@ using UnityEngine;
 
 namespace UnforeseenConsequences.Chemistry
 {
-	public static class Reactions
+	public class ReactionManager : MonoBehaviour
 	{
-		private static Substance[] substances;
-		private static Effect[] effects;
-		private static Reaction[] all;
-		private static Effect explodeEffect;
+		[SerializeField] private Substance[] substances;
+		[SerializeField] private Effect[] effects;
+		[SerializeField] private Effect explodeEffect;
+		private Reaction[] all;
 
-		public static IEnumerable<Reaction> All
+		public IEnumerable<Reaction> Reactions
 		{
 			get { return all; }
 		}
-		public static Effect ExplodeEffect
+		public Effect ExplodeEffect
 		{
 			get { return explodeEffect; }
 		}
-		public static bool Initialized
+		public bool Initialized
 		{
 			get { return all != null; }
 		}
 
-		public static void Init()
+		public void Init()
 		{
-			Effect[] effects = UnityEngine.Object.FindObjectsOfType<Effect>();
 			explodeEffect = effects.FirstOrDefault(s => s.name == "Explosion");
 			all = new Reaction[]
 			{
@@ -52,10 +51,8 @@ namespace UnforeseenConsequences.Chemistry
 				Create("Dust"     , "Water", "Mud"       , "MixSuccessFeedback")
 			};
 		}
-		private static Reaction Create(string first, string second, string result, string mixEffect)
+		private Reaction Create(string first, string second, string result, string mixEffect)
 		{
-			if (effects == null) effects = Resources.LoadAll<Effect>("Chemistry\\Effects");
-			if (substances == null) substances = Resources.LoadAll<Substance>("Chemistry\\Substances");
 			return new Reaction(
 				substances.FirstOrDefault(s => s.name == first),
 				substances.FirstOrDefault(s => s.name == second),

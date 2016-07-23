@@ -11,29 +11,43 @@ namespace UnforeseenConsequences.Chemistry
 	{
 		public static List<Substance> Solve(IEnumerable<Substance> substances)
 		{
-			EnsureReactions();
 			List<Substance> pool = new List<Substance>(substances);
 			bool multiple = pool.Count > 1;
 
+			// Retrieve the reaction manager
+			ReactionManager reactionManager = UnityEngine.Object.FindObjectOfType<ReactionManager>();
+
 			// Invoke reactions until nothing reacts anymore
-			while (InvokeReaction(pool));
+			while (InvokeReaction(reactionManager, pool));
 
 			// Are there substances left with no reaction performed? Explode!
 			if (multiple && pool.Count > 0)
 			{
-				Reactions.ExplodeEffect.Trigger();
+				reactionManager.ExplodeEffect.Trigger();
 				pool.Clear();
 			}
 
 			// Return the remaining (or created) substances
 			return pool;
 		}
-		private static bool InvokeReaction(List<Substance> substances)
+		private static bool InvokeReaction(ReactionManager reactionManager, List<Substance> substances)
 		{
-			foreach (Reaction reaction in Reactions.All)
+			if (!reactionManager.Initialized)
+				reactionManager.Init();
+
+			foreach (Reaction reaction in reactionManager.Reactions)
 			{
 				// Skip if not all required substances are there
-				if (!reaction.Ingredients.All(required => substances.Contains(required)))
+				bool requirementsMet = true;
+				foreach (Substance required in reaction.Ingredients)
+				{
+					if (!substances.Contains(required))
+					{
+						requirementsMet = false;
+						break;
+					}
+				}
+				if (!requirementsMet)
 					continue;
 
 				// Remove the required substances
@@ -52,11 +66,6 @@ namespace UnforeseenConsequences.Chemistry
 			}
 
 			return false;
-		}
-		private static void EnsureReactions()
-		{
-			if (Reactions.Initialized) return;
-			Reactions.Init();
 		}
 	}
 }

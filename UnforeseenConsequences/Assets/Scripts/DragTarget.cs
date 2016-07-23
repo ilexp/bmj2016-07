@@ -27,7 +27,7 @@ namespace UnforeseenConsequences
 			if (in_item)
 			{
 				Debug.Log("attempt to interact with " + this.gameObject.name + (in_item == null ? "" : " while dragging " + in_item.name));
-				BottlePotionOnClick potScript = GetComponent<BottlePotionOnClick>();
+				MixingPot potScript = GetComponent<MixingPot>();
 				if (potScript)
 				{
 					potScript.addPotion(in_item);

@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\DragTarget.cs" />
     <Compile Include="Assets\Scripts\DraggableItem.cs" />
     <Compile Include="Assets\Scripts\InteractiveObject.cs" />
+    <Compile Include="Assets\Scripts\MixingPot.cs" />
     <Compile Include="Assets\Scripts\Potion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

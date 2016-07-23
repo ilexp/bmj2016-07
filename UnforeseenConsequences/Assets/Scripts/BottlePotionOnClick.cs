@@ -20,33 +20,25 @@ namespace UnforeseenConsequences
 		public override void handleMouseDown()
 		{
 			// create new potion if non-empty
-			if (m_potContent.Count > 0)
+			MixingPot potScript = GetComponent<MixingPot>();
+			if (potScript && potScript.Content)
 			{
+				// create new potion
 				GameObject newPotion = Instantiate(m_potionPrefab);
 				newPotion.transform.parent = m_potionsBar;
 				newPotion.transform.position = new Vector3(0, 0, 0);
 				DraggableItem item = newPotion.GetComponent<DraggableItem>();
 				if (item)
 				{
-					item.m_potionSubstance = m_potContent;
-					m_potContent.Clear();
+					// pour pot content into potion
+					Potion potionScript = item.GetComponent<Potion>();
+					potionScript.Content = potScript.Content;
+					potScript.Content = null;
 				}
 			}
 			else
 			{
 				Debug.Log("The pot is empty!");
-			}
-		}
-
-		public void addPotion(DraggableItem i_potion)
-		{
-			Potion potionScript = i_potion.GetComponent<Potion>();
-			BottlePotionOnClick potScript = GetComponent<BottlePotionOnClick>();
-			if (potionScript && potScript)
-			{
-				Debug.Log("added " + i_potion.name + " to pot");
-				m_potContent.Add(potionScript.Content);
-				m_potContent = Solver.Solve(m_potContent);
 			}
 		}
 	}

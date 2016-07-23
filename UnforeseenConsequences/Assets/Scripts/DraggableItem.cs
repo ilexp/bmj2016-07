@@ -8,8 +8,6 @@ namespace UnforeseenConsequences
 {
 	public class DraggableItem : InteractiveObject
 	{
-		public List<Substance> m_potionSubstance;
-
 		Vector3 m_initialPosition;
 		void Start()
 		{

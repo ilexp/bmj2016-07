@@ -18,10 +18,14 @@ namespace UnforeseenConsequences.Chemistry
 			ReactionManager reactionManager = UnityEngine.Object.FindObjectOfType<ReactionManager>();
 
 			// Invoke reactions until nothing reacts anymore
-			while (InvokeReaction(reactionManager, pool));
+			bool anyReactionDone = false;
+			while (InvokeReaction(reactionManager, pool))
+			{
+				anyReactionDone = true;
+			}
 
 			// Are there substances left with no reaction performed? Explode!
-			if (multiple && pool.Count > 0)
+			if (multiple && !anyReactionDone && pool.Count > 0)
 			{
 				reactionManager.ExplodeEffect.Trigger();
 				pool.Clear();
@@ -57,6 +61,7 @@ namespace UnforeseenConsequences.Chemistry
 				}
 
 				// Trigger the reaction's effect and add any created substances into the mix
+				Debug.LogFormat("Mixed {0} and {1}, got {2}", reaction.Ingredients.ElementAt(0).name, reaction.Ingredients.ElementAt(1).name, reaction.Result.name);
 				if (reaction.EffectWhenMixed != null)
 					reaction.EffectWhenMixed.Trigger();
 				substances.Add(reaction.Result);

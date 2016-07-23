@@ -27,10 +27,10 @@ namespace UnforeseenConsequences
 			if (in_item)
 			{
 				Debug.Log("attempt to interact with " + this.gameObject.name + (in_item == null ? "" : " while dragging " + in_item.name));
-				MixingPot potScript = GetComponent<MixingPot>();
-				if (potScript)
+				foreach (MonoBehaviour other in GetComponents<MonoBehaviour>())
 				{
-					potScript.addPotion(in_item);
+					if (other is IDragTargetListener)
+						(other as IDragTargetListener).OnItemDragged(in_item);
 				}
 				in_item.destroyObject();
 			}

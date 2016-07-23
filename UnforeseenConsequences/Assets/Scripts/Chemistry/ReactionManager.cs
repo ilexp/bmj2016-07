@@ -49,9 +49,22 @@ namespace UnforeseenConsequences.Chemistry
 				Create("Plant", "Air", "Seed", "MixSuccessFeedback"),
 				Create("Dust", "Fire", "Combustion", "MixSuccessFeedback"),
 				Create("Dust", "Water", "Mud", "MixSuccessFeedback"),
-				Create("Steam", "Magma", "Magma", "MixSuccessFeedback"),
-				Create("Steam", "Lightning", "Ghost", "MixSuccessFeedback"),
-				Create("Stone", "Lightning", "Crystal", "MixSuccessFeedback")
+				Create("Steam", "Magma", "Fire", "MixSuccessFeedback"),
+				Create("Steam", "Lightning", "Fire", "MixSuccessFeedback"),
+				Create("Steam", "Plant", "Water", "MixSuccessFeedback"),
+				Create("Ghost", "Magma", "Metal", "MixSuccessFeedback"),
+				Create("Ghost", "Lightning", "Air", "MixSuccessFeedback"),
+				Create("Ghost", "Plant", "Water", "MixSuccessFeedback"),
+				Create("Ghost", "Dust", "Air", "MixSuccessFeedback"),
+				Create("Magma", "Lightning", "Fire", "MixSuccessFeedback"),
+				Create("Magma", "Plant", "Earth", "MixSuccessFeedback"),
+				Create("Magma", "Dust", "Earth", "MixSuccessFeedback"),
+				Create("Lightning", "Plant", "Healing", "MixSuccessFeedback"),
+				Create("Lightning", "Dust", "Air", "MixSuccessFeedback"),
+				Create("Plant", "Dust", "Earth", "MixSuccessFeedback"),
+				Create("Metal", "Healing", "Monster", "MixSuccessFeedback"),
+				Create("Metal", "Pest", "Gold", "MixSuccessFeedback"),
+				Create("Healing", "Pest", "Cure", "MixSuccessFeedback")
 			};
 		}
 		private Reaction Create(string first, string second, string result, string mixEffect)

@@ -68,12 +68,12 @@
     <Compile Include="Assets\Scripts\Chemistry\Effects\MixFeedbackEffect.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Reaction.cs" />
     <Compile Include="Assets\Scripts\Chemistry\ReactionManager.cs" />
-    <Compile Include="Assets\Scripts\Chemistry\Reactions.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Solver.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Substance.cs" />
     <Compile Include="Assets\Scripts\DragTarget.cs" />
     <Compile Include="Assets\Scripts\DraggableItem.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\IDragTargetListener.cs" />
     <Compile Include="Assets\Scripts\InteractiveObject.cs" />
     <Compile Include="Assets\Scripts\MixingPot.cs" />
     <Compile Include="Assets\Scripts\Potion.cs" />

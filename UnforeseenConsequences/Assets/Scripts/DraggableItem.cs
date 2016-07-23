@@ -1,8 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class DraggableItem : InteractiveObject
 {
+	Vector3 m_initialPosition;
+	void Start()
+	{
+		m_initialPosition = transform.position;
+	}
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -22,11 +29,7 @@ public class DraggableItem : InteractiveObject
 	{
 		Debug.Log("Start dragging potion");
 		m_draggedItem = this;
-		BoxCollider2D coll = this.GetComponent<BoxCollider2D>();
-		if (coll)
-		{
-			coll.enabled = false;
-		}
+		setImageRaycastTarget(false);
 	}
 
 	public override void handleMouseUp()
@@ -39,11 +42,19 @@ public class DraggableItem : InteractiveObject
 		}
 		else
 		{
-			BoxCollider2D coll = this.GetComponent<BoxCollider2D>();
-			if (coll)
-			{
-				coll.enabled = true;
-			}
+			// snap back to initial position
+			transform.position = m_initialPosition;
+			setImageRaycastTarget(true);
+        }
+	}
+
+	void setImageRaycastTarget(bool i_value)
+	{
+		// enable raycast
+		Image imageScript = this.GetComponent<Image>();
+		if (imageScript)
+		{
+			imageScript.raycastTarget = i_value;
 		}
 	}
 

@@ -45,10 +45,5 @@ public class ClickableObject : MonoBehaviour
 
 	public virtual void handleLeftMouseClick(Vector3 in_mousePos)
 	{
-		releaseDraggedItem();
-		//if (m_player)
-		//{
-		//	m_player.moveToPosition(in_mousePos, this.gameObject);
-		//}
 	}
 }

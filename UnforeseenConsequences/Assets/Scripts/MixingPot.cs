@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,6 +34,23 @@ namespace UnforeseenConsequences
 			else
 			{ 
 				this.middleImage.color = this.content.Color;
+			}
+		}
+
+		public void addPotion(DraggableItem i_potion)
+		{
+			Potion potionScript = i_potion.GetComponent<Potion>();
+			BottlePotionOnClick potScript = GetComponent<BottlePotionOnClick>();
+			if (potionScript && potScript)
+			{
+				Debug.Log("added " + i_potion.name + " to pot");
+				List<Substance> substances = new List<Substance>();
+				if (Content != null)
+				{
+					substances.Add(Content);
+				}
+				substances.Add(potionScript.Content);
+				Content = Solver.Solve(substances).FirstOrDefault<Substance>();
 			}
 		}
 	}

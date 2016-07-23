@@ -1,20 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InteractiveObject : MonoBehaviour
+namespace UnforeseenConsequences
 {
-	protected static DraggableItem m_draggedItem;
-
-	public virtual void destroyObject()
+	public class InteractiveObject : MonoBehaviour
 	{
-		this.gameObject.SetActive(false);
-	}
+		protected static DraggableItem m_draggedItem;
 
-	public virtual void handleMouseDown()
-	{
-	}
+		public virtual void destroyObject()
+		{
+			this.gameObject.SetActive(false);
+			Destroy(this);
+		}
 
-	public virtual void handleMouseUp()
-	{
+		public virtual void handleMouseDown()
+		{
+		}
+
+		public virtual void handleMouseUp()
+		{
+		}
 	}
 }

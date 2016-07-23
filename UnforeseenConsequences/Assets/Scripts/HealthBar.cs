@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class HealthBar
 {
 	private int initialHp {get;}  // initial hp value, might be interesting later
@@ -7,21 +9,21 @@ public class HealthBar
 
 	public HealthBar(int minHp, int maxHp, int initialHp)
 	{
-		minHp = minHp;
-		maxHp = maxHp;
-		initialHp = initialHp;
-		currentHp = initialHp;
+		this.minHp = minHp;
+		this.maxHp = maxHp;
+		this.initialHp = initialHp;
+		this.currentHp = initialHp;
 	}
 
 	public void decreaseHp(int decreaseAmount)
 	{
-		currentHp = Math.Max(currentHp - decreaseHp, minHp);
+		currentHp = Mathf.Max(currentHp - decreaseAmount, minHp);
 		updateOnHpChange();
 	}
 
 	public void increaseHp(int increaseAmount)
 	{
-		currentHp = Math.Max(currentHp + increaseHp, maxHp);
+		currentHp = Mathf.Max(currentHp + increaseAmount, maxHp);
 		updateOnHpChange();
 	}
 

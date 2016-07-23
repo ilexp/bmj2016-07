@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd83705aea518de47954e51555ce960d, type: 3}
   m_Name: Gold
   m_EditorClassIdentifier: 
-  displayedName: 
+  displayedName: Gold
   color:
     serializedVersion: 2
     rgba: 4278243818

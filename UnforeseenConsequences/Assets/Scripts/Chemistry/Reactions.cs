@@ -10,9 +10,15 @@ namespace UnforeseenConsequences.Chemistry
 	public static class Reactions
 	{
 		private static Reaction[] all;
+		private static Effect explodeEffect;
+
 		public static IEnumerable<Reaction> All
 		{
 			get { return all; }
+		}
+		public static Effect ExplodeEffect
+		{
+			get { return explodeEffect; }
 		}
 		public static bool Initialized
 		{
@@ -21,6 +27,8 @@ namespace UnforeseenConsequences.Chemistry
 
 		public static void Init()
 		{
+			Effect[] effects = UnityEngine.Object.FindObjectsOfType<Effect>();
+			explodeEffect = effects.FirstOrDefault(s => s.name == "Explosion");
 			all = new Reaction[]
 			{
 				Create("Fire", "Water", "Steam", "MixSuccessFeedback")

@@ -30,21 +30,25 @@ public class HealthBar
 	public void increaseMaxHp(int increaseAmount)
 	{
 		maxHp = Math.Max(maxHp + increaseAmount, minHp);
+		updateOnMaxHpChange();
 	}
 
 	public void decreaseMaxHp(int decreaseAmount)
 	{
 		maxHp = Math.Max(maxHp - decreaseAmount, minHp);
+		updateOnMaxHpChange();
 	}
 
 	public void increaseMinHp(int increaseAmount)
 	{
 		minHp = Math.Min(minHp + increaseAmount, maxHp);
+		updateOnMinHpChange();
 	}
 
 	public void decreaseMinHp(int decreaseAmount)
 	{
 		minHp = Math.Min(minHp - decreaseAmount, maxHp);
+		updateOnMinHpChange();
 	}
 
 	public void fillHp()
@@ -60,6 +64,16 @@ public class HealthBar
 	}
 
 	public void updateOnHpChange()
+	{
+		// redraw stuff
+	}
+
+	public void updateOnMinHpChange()
+	{
+		// redraw stuff
+	}
+
+	public void updateOnMaxHpChange()
 	{
 		// redraw stuff
 	}

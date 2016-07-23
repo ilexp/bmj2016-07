@@ -54,10 +54,10 @@ namespace UnforeseenConsequences
 		void setImageRaycastTarget(bool i_value)
 		{
 			// enable raycast
-			Image imageScript = this.GetComponent<Image>();
-			if (imageScript)
+			Image[] imageScripts = this.GetComponentsInChildren<Image>();
+			foreach (Image img in imageScripts)
 			{
-				imageScript.raycastTarget = i_value;
+				img.raycastTarget = i_value;
 			}
 		}
 

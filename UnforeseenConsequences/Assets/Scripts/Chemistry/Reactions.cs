@@ -9,6 +9,8 @@ namespace UnforeseenConsequences.Chemistry
 {
 	public static class Reactions
 	{
+		private static Substance[] substances;
+		private static Effect[] effects;
 		private static Reaction[] all;
 		private static Effect explodeEffect;
 
@@ -55,8 +57,8 @@ namespace UnforeseenConsequences.Chemistry
 		}
 		private static Reaction Create(string first, string second, string result, string mixEffect)
 		{
-			Effect[] effects = UnityEngine.Object.FindObjectsOfType<Effect>();
-			Substance[] substances = UnityEngine.Object.FindObjectsOfType<Substance>();
+			if (effects == null) effects = Resources.LoadAll<Effect>("Chemistry\\Effects");
+			if (substances == null) substances = Resources.LoadAll<Substance>("Chemistry\\Substances");
 			return new Reaction(
 				substances.FirstOrDefault(s => s.name == first),
 				substances.FirstOrDefault(s => s.name == second),

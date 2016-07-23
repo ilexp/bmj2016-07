@@ -25,8 +25,8 @@ namespace UnforeseenConsequences
 			{
 				// create new potion
 				GameObject newPotion = Instantiate(m_potionPrefab);
+				newPotion.transform.position = m_potionsBar.transform.position;
 				newPotion.transform.parent = m_potionsBar;
-				newPotion.transform.position = new Vector3(0, 0, 0);
 				DraggableItem item = newPotion.GetComponent<DraggableItem>();
 				if (item)
 				{
